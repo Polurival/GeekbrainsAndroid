@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GeocoderApp</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="search_btn">Search</string>
+    <string name="add_marker_btn">Add marker</string>
+    <string name="coordinates">Latitude: %1$s\nLongitude: %2$s</string>
+
+    <string name="null_address_list">list of addresses is empty</string>
+    <string name="marker_already_exist">Marker is already exist</string>
+
+
+</resources>

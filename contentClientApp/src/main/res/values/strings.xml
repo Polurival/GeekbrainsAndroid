@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ShoppingListClient</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="name">Name:</string>
+    <string name="count">Count:</string>
+    <string name="shop">Shop:</string>
+
+    <string name="menuitem_edit">Edit</string>
+    <string name="menuitem_delete">Delete</string>
+
+    <string name="hint_name_required">Name (Required)</string>
+    <string name="hint_count">Count</string>
+    <string name="hint_shop">Shop</string>
+
+    <string name="item_added">Item added successfully</string>
+    <string name="item_not_added">Item was not added due to an error</string>
+    <string name="item_updated">Item updated</string>
+    <string name="item_not_updated">Item was not updated due to an error</string>
+
+    <string name="confirm_title">Are You sure?</string>
+    <string name="confirm_message">This will permanently delete the item</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>

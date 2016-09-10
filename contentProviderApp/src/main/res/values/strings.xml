@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShoppingListProvider</string>
+    <string name="desc">It\'s just a provider of items to buy!</string>
+</resources>

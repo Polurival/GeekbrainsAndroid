@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <TextView
+            android:id="@+id/nameLabelTextView"
+            style="@style/ItemLabelTextView"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/countLabelTextView"
+            style="@style/ItemLabelTextView"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="@string/count" />
+
+        <TextView
+            android:id="@+id/shopLabelTextView"
+            style="@style/ItemLabelTextView"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="@string/shop" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/ItemTextView"
+            android:layout_column="1"
+            android:layout_row="0" />
+
+        <TextView
+            android:id="@+id/countTextView"
+            style="@style/ItemTextView"
+            android:layout_column="1"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/shopTextView"
+            style="@style/ItemTextView"
+            android:layout_column="1"
+            android:layout_row="2" />
+
+    </GridLayout>
+
+</ScrollView>
