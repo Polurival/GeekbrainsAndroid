@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GeekbrainsAndroid.iml" filepath="$PROJECT_DIR$/GeekbrainsAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/contentClientApp/contentClientApp.iml" filepath="$PROJECT_DIR$/contentClientApp/contentClientApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/contentProviderApp/contentProviderApp.iml" filepath="$PROJECT_DIR$/contentProviderApp/contentProviderApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fileDownloaderApp/fileDownloaderApp.iml" filepath="$PROJECT_DIR$/fileDownloaderApp/fileDownloaderApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/geocoderApp/geocoderApp.iml" filepath="$PROJECT_DIR$/geocoderApp/geocoderApp.iml" />
     </modules>
   </component>

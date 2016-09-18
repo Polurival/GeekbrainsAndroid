@@ -1,1 +1,1 @@
-include ':contentProviderApp', ':contentClientApp', ':geocoderApp'
+include ':contentProviderApp', ':contentClientApp', ':geocoderApp', ':fileDownloaderApp'

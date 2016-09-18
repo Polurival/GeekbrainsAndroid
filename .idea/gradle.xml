@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/contentClientApp" />
             <option value="$PROJECT_DIR$/contentProviderApp" />
+            <option value="$PROJECT_DIR$/fileDownloaderApp" />
             <option value="$PROJECT_DIR$/geocoderApp" />
           </set>
         </option>
@@ -18,6 +19,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/contentClientApp" />
             <option value="$PROJECT_DIR$/contentProviderApp" />
+            <option value="$PROJECT_DIR$/fileDownloaderApp" />
             <option value="$PROJECT_DIR$/geocoderApp" />
           </set>
         </option>
