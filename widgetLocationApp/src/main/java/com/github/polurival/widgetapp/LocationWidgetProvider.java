@@ -175,7 +175,7 @@ public class LocationWidgetProvider extends AppWidgetProvider {
 
         private void updateCoordinates(double latitude, double longitude) {
             Geocoder coder = new Geocoder(this);
-            List<Address> addresses = null;
+            List<Address> addresses;
             String info = "";
 
             AppLog.logString("Service.updateCoordinates()");
@@ -196,7 +196,9 @@ public class LocationWidgetProvider extends AppWidgetProvider {
                             }
                         }
                     } else {
-                        info += addresses.get(0).getFeatureName() + ", " + addresses.get(0).getSubAdminArea() + ", " + addresses.get(0).getAdminArea();
+                        info += addresses.get(0).getFeatureName() + ", " +
+                                addresses.get(0).getSubAdminArea() + ", " +
+                                addresses.get(0).getAdminArea();
                     }
 
                     AppLog.logString(addresses.get(0).toString());
@@ -204,9 +206,6 @@ public class LocationWidgetProvider extends AppWidgetProvider {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            coder = null;
-            addresses = null;
 
             if (info.length() <= 0) {
                 info = "lat " + latitude + ", lon " + longitude;
