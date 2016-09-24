@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/contentProviderApp/contentProviderApp.iml" filepath="$PROJECT_DIR$/contentProviderApp/contentProviderApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/fileDownloaderApp/fileDownloaderApp.iml" filepath="$PROJECT_DIR$/fileDownloaderApp/fileDownloaderApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/geocoderApp/geocoderApp.iml" filepath="$PROJECT_DIR$/geocoderApp/geocoderApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/widgetLocationApp/widgetApp.iml" filepath="$PROJECT_DIR$/widgetLocationApp/widgetApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/widgetLocationApp/widgetLocationApp.iml" filepath="$PROJECT_DIR$/widgetLocationApp/widgetLocationApp.iml" />
     </modules>
   </component>
