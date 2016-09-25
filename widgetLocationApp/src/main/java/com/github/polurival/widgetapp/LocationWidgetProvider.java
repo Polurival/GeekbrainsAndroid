@@ -36,15 +36,42 @@ import java.util.List;
  * https://github.com/kaknazaveshtakipishi/PermissionEverywhere
  */
 public class LocationWidgetProvider extends AppWidgetProvider {
+
+    private static final int REQ_CODE = 0;
+
     @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+    public void onUpdate(final Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
 
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            PermissionEverywhere.getPermission(context,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION},
+                    REQ_CODE,
+                    "Please, give permissions!",
+                    "This app needs a location permission",
+                    R.mipmap.ic_launcher)
+                    .enqueue(new PermissionResultCallback() {
+                        @Override
+                        public void onComplete(PermissionResponse permissionResponse) {
+                            Toast.makeText(context, "Permission is Granted " +
+                                    permissionResponse.isGranted(), Toast.LENGTH_SHORT)
+                                    .show();
+                            startWidgetService(context);
+                        }
+                    });
+        } else {
+            startWidgetService(context);
+        }
+    }
+
+    private void startWidgetService(Context context) {
         context.startService(new Intent(context, GPSWidgetService.class));
     }
 
     public static class GPSWidgetService extends Service {
-        private static final int REQ_CODE = 0;
+
         private LocationManager manager = null;
 
         private LocationListener listener = new LocationListener() {
@@ -86,13 +113,6 @@ public class LocationWidgetProvider extends AppWidgetProvider {
         }
 
         @Override
-        public void onStart(Intent intent, int startId) {
-            super.onStart(intent, startId);
-
-            waitForGPSCoordinates();
-        }
-
-        @Override
         public void onDestroy() {
             stopListening();
 
@@ -118,24 +138,6 @@ public class LocationWidgetProvider extends AppWidgetProvider {
             AppLog.logString("Service.startListening()");
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-                PermissionEverywhere.getPermission(getApplicationContext(),
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
-                                Manifest.permission.ACCESS_COARSE_LOCATION},
-                        REQ_CODE,
-                        "Please, give permissions!",
-                        "This app needs a location permission",
-                        R.mipmap.ic_launcher)
-                        .enqueue(new PermissionResultCallback() {
-                            @Override
-                            public void onComplete(PermissionResponse permissionResponse) {
-                                Toast.makeText(GPSWidgetService.this, "is Granted " +
-                                        permissionResponse.isGranted(), Toast.LENGTH_SHORT)
-                                        .show();
-                            }
-                        });
-            }
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
 
@@ -160,10 +162,10 @@ public class LocationWidgetProvider extends AppWidgetProvider {
         }
 
         private void stopListening() {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
             try {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    return;
-                }
                 if (manager != null && listener != null) {
                     manager.removeUpdates(listener);
                 }
