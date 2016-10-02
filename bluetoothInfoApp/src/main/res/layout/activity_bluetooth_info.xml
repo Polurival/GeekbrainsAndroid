@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.github.polurival.bluetoothinfoapp.BluetoothInfoActivity">
+
+    <Button
+        android:id="@+id/enableBluetoothBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_bluetooth"/>
+
+    <Button
+        android:id="@+id/findDevicesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/enableBluetoothBtn"
+        android:text="@string/find_devices"/>
+
+    <Button
+        android:id="@+id/stopFindingDevicesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_finding_devices"
+        android:layout_below="@+id/enableBluetoothBtn"
+        android:layout_toRightOf="@+id/findDevicesBtn"
+        android:layout_toEndOf="@+id/findDevicesBtn"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/devicesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/findDevicesBtn"/>
+
+</RelativeLayout>

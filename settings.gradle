@@ -1,1 +1,1 @@
-include ':contentProviderApp', ':contentClientApp', ':geocoderApp', ':fileDownloaderApp', ':widgetLocationApp'
+include ':contentProviderApp', ':contentClientApp', ':geocoderApp', ':fileDownloaderApp', ':widgetLocationApp', ':smsApp', ':bluetoothInfoApp'

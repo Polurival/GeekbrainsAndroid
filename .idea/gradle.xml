@@ -8,20 +8,24 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/bluetoothInfoApp" />
             <option value="$PROJECT_DIR$/contentClientApp" />
             <option value="$PROJECT_DIR$/contentProviderApp" />
             <option value="$PROJECT_DIR$/fileDownloaderApp" />
             <option value="$PROJECT_DIR$/geocoderApp" />
+            <option value="$PROJECT_DIR$/smsApp" />
             <option value="$PROJECT_DIR$/widgetLocationApp" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/bluetoothInfoApp" />
             <option value="$PROJECT_DIR$/contentClientApp" />
             <option value="$PROJECT_DIR$/contentProviderApp" />
             <option value="$PROJECT_DIR$/fileDownloaderApp" />
             <option value="$PROJECT_DIR$/geocoderApp" />
+            <option value="$PROJECT_DIR$/smsApp" />
             <option value="$PROJECT_DIR$/widgetLocationApp" />
           </set>
         </option>
